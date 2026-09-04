@@ -11,6 +11,11 @@ GROUP BY category
 ORDER BY revenue DESC;
 
 --Online vs. in-store performance by category
+SELECT category, location, SUM("Total Spent") AS revenue,
+    ROUND(AVG("Total Spent"), 2) AS avg_order_value
+FROM sales
+GROUP BY category, location
+ORDER BY category, location;
 
 --Repeat vs. new customers
 --Customer concentration: Does the top 20% of customers drive most of the revenue?
