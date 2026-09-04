@@ -18,5 +18,10 @@ GROUP BY category, location
 ORDER BY category, location;
 
 --Repeat vs. new customers
+SELECT is_repeat, COUNT(DISTINCT "Customer ID") AS customers,
+    SUM("Total Spent") AS revenue
+FROM sales
+GROUP BY is_repeat;
+
 --Customer concentration: Does the top 20% of customers drive most of the revenue?
 --Discount impact on quantity and order value
