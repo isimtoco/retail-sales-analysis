@@ -28,3 +28,6 @@ df['Order_Month'] = df['Transaction Date'].dt.to_period('M')
 
 # Remove rows where sales amount still cannot be determined
 df = df.dropna(subset=['Total Spent'])
+
+# Save cleaned data
+df.to_csv('data/cleaned_retail_sales.csv', index=False)
