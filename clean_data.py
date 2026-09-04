@@ -23,3 +23,8 @@ df['Item'] = df['Item'].fillna('Unknown')
 # Convert date
 df['Transaction Date'] = pd.to_datetime(df['Transaction Date'])
 
+# Create month column
+df['Order_Month'] = df['Transaction Date'].dt.to_period('M')
+
+# Remove rows where sales amount still cannot be determined
+df = df.dropna(subset=['Total Spent'])
