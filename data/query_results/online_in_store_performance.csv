@@ -1,0 +1,17 @@
+Category,Location,revenue,avg_order_value
+Beverages,In-store,98026.0,131.76
+Beverages,Online,99021.5,131.68
+Butchers,In-store,101777.0,136.98
+Butchers,Online,106341.0,141.22
+Computers and electric accessories,In-store,87323.5,126.56
+Computers and electric accessories,Online,103369.0,131.35
+Electric household essentials,In-store,97778.5,133.21
+Electric household essentials,Online,106035.0,135.59
+Food,In-store,95926.0,127.39
+Food,Online,98886.0,131.15
+Furniture,In-store,99611.0,129.03
+Furniture,Online,95699.0,127.09
+Milk Products,In-store,88813.0,118.42
+Milk Products,Online,91299.0,119.66
+Patisserie,In-store,91415.0,127.5
+Patisserie,Online,90750.5,125.35
