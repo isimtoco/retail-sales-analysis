@@ -17,6 +17,28 @@ df.loc[mask, 'Total Spent'] = (
     * df.loc[mask, 'Quantity']
 )
 
+# Fill missing Quantity when total spent and price are available
+mask = (
+    df['Quantity'].isnull()
+    & df['Total Spent'].notnull()
+    & df['Price Per Unit'].notnull()
+)
+df.loc[mask, 'Quantity'] = (
+    df.loc[mask, 'Total Spent']
+    / df.loc[mask, 'Price Per Unit']
+)
+
+# Fill missing Price Per Unit when total spent and quantity are available
+mask = (
+    df['Price Per Unit'].isnull()
+    & df['Total Spent'].notnull()
+    & df['Quantity'].notnull()
+)
+df.loc[mask, 'Price Per Unit'] = (
+    df.loc[mask, 'Total Spent']
+    / df.loc[mask, 'Quantity']
+)
+
 # Fill missing item names
 df['Item'] = df['Item'].fillna('Unknown')
 
