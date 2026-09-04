@@ -23,5 +23,7 @@ SELECT is_repeat, COUNT(DISTINCT "Customer ID") AS customers,
 FROM sales
 GROUP BY is_repeat;
 
---Customer concentration: Does the top 20% of customers drive most of the revenue?
 --Discount impact on quantity and order value
+SELECT discount_status, ROUND(AVG(quantity), 2) AS avg_quantity, ROUND(AVG("Total Spent"),2) AS avg_order_value
+FROM sales
+GROUP BY discount_status;
