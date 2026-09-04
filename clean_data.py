@@ -60,3 +60,6 @@ df = df.dropna(subset=['Total Spent'])
 
 # Save cleaned data
 df.to_csv('data/cleaned_retail_sales.csv', index=False)
+
+# Print how many rows and columns still remain after cleaning
+print('Final shape:', df.shape)
