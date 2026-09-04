@@ -1,4 +1,8 @@
 --Revenue by month
+SELECT order_month, SUM("Total Spent") AS revenue
+FROM sales 
+GROUP BY order_month
+ORDER BY order_month;
 
 --Top categories by revenue
 
