@@ -5,6 +5,10 @@ GROUP BY order_month
 ORDER BY order_month;
 
 --Top categories by revenue
+SELECT category, SUM("Total Spent") AS revenue, COUNT(*) AS transactions
+FROM sales
+GROUP BY category
+ORDER BY revenue DESC;
 
 --Online vs. in-store performance by category
 
